@@ -8,16 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --green-dark: #1d2020;
+    --green-dark: #242626;
     --green-mid: #f3072f;
     --green-accent: #26865d;
-    --green-light: #e8f5ee;
+    --green-light: #f1f7f4;
     --amber: #c9860a;
     --amber-light: #fdf3e0;
-    --text-primary: #121312;
-    --text-secondary: #151615;
+    --text-primary: #000000;
+    --text-secondary: #000000;
     --text-muted: #7e8375;
-    --bg: #fcfcfc;
+    --bg: #ffffff;
     --bg-soft: #ddeedd;
     --border: rgba(0,0,0,0.08);
     --drawer-w: 300px;
@@ -467,7 +467,7 @@
 
   /* ── FOOTER ── */
   footer {
-    background: #0c3a2b;
+    background: #114e3a;
     padding: 1.5rem 8vw;
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 0.5rem;
@@ -561,6 +561,13 @@
         <a href="#awards">
           <span class="nav-dot" style="background:#c9860a"></span>
           Awards
+        </a>
+      </li>
+
+      <li>
+        <a href="#editorial">
+          <span class="nav-dot" style="background:#26865d"></span>
+          Editorial Roles
         </a>
       </li>
 
@@ -2283,7 +2290,7 @@ function togJDom(btn){
 .awards-meta{font-size:.8rem;color:var(--text-muted);letter-spacing:.03em;}
 .award-card{
   display:flex;gap:1.75rem;align-items:flex-start;
-  background:#fff;border:1px solid var(--border);border-radius:12px;
+  background:#ffffff;border:1px solid var(--border);border-radius:12px;
   padding:1.75rem 2rem;max-width:860px;
   position:relative;overflow:hidden;
   box-shadow:0 2px 16px rgba(0,0,0,.05);
@@ -2337,10 +2344,7 @@ function togJDom(btn){
       <div class="award-journal">Insects · MDPI · Impact Factor 2.9 · CiteScore 5.3 · PubMed Indexed</div>
       <p class="award-desc">
         Selected as the winner of the <strong>Insects Best Paper Award</strong> by the journal's editorial committee.
-        The paper presents a global SDM-based assessment of how climate change is shifting habitat suitability
-        for bee species worldwide, revealing both regional gains and losses across major pollination zones.
-        Signed by Prof. Dr. Brian T. Forschler, Editor-in-Chief. Basel, June 2026.
-      </p>
+              </p>
       <div class="award-links">
         <a class="award-link-primary" href="https://www.mdpi.com/journal/insects/awards/3629" target="_blank">&#8599; View Award</a>
         <a class="award-link-sec" href="https://doi.org/10.3390/insects15020127" target="_blank">↗ Read Paper (doi:10.3390/insects15020127)</a>
@@ -2350,8 +2354,108 @@ function togJDom(btn){
 
 </section>
 
+<!-- GUEST EDITOR -->
+<section id="editorial" style="padding:3rem 8vw 3.5rem;background:#eefffa;border-bottom:1px solid var(--border);">
+
+<style>
+.editorial-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;}
+.editorial-header h2{font-family:'Lora',serif;font-size:1.65rem;color:var(--green-dark);margin-bottom:.35rem;}
+.editorial-meta{font-size:.8rem;color:var(--text-muted);letter-spacing:.03em;}
+.editorial-card{
+  display:flex;gap:1.75rem;align-items:flex-start;
+  background:linear-gradient(135deg,#ffffff 0%,#ffffff 100%);
+  border:1px solid rgba(38,134,93,0.25);border-radius:14px;
+  padding:2rem 2.25rem;max-width:860px;
+  position:relative;overflow:hidden;
+  box-shadow:0 2px 18px rgba(210, 240, 217, 0.568);
+  transition:box-shadow .2s;
+}
+.editorial-card:hover{box-shadow:0 6px 28px rgba(1, 29, 17, 0.14);}
+.editorial-card::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(180deg,#26865d,#4ade80);
+}
+.editorial-icon{font-size:2.4rem;flex-shrink:0;line-height:1;display:flex;align-items:flex-start;padding-top:2px;}
+.editorial-body{flex:1;}
+.editorial-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.1em;color:#15593a;
+  background:rgba(38,134,93,0.1);border:1px solid rgba(38,134,93,0.3);
+  border-radius:20px;padding:3px 12px;margin-bottom:.85rem;
+}
+.editorial-journal-name{
+  font-family:'Lora',serif;font-size:1.18rem;font-weight:600;
+  color:#111;line-height:1.45;margin-bottom:.5rem;
+}
+.editorial-journal-meta{font-size:.83rem;color:var(--green-mid);font-weight:500;margin-bottom:.9rem;}
+.editorial-desc{font-size:.875rem;line-height:1.75;color:var(--text-secondary);margin-bottom:1.1rem;}
+.editorial-scope{
+  background:rgba(189, 23, 23, 0.7);border:1px solid rgba(38,134,93,0.15);
+  border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.1rem;
+}
+.editorial-scope-title{
+  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.09em;color:#26865d;margin-bottom:.55rem;
+}
+.editorial-scope-list{
+  list-style:none;display:flex;flex-wrap:wrap;gap:.45rem;
+}
+.editorial-scope-list li{
+  font-size:.78rem;background:#e8f5ee;color:#15593a;
+  border:1px solid rgba(38,134,93,0.2);border-radius:20px;
+  padding:3px 10px;
+}
+.editorial-deadline{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.8rem;color:#8a6200;background:#fff8e1;
+  border:1px solid #f0c040;border-radius:6px;
+  padding:5px 12px;margin-bottom:1.1rem;font-weight:500;
+}
+.editorial-links{display:flex;gap:.75rem;flex-wrap:wrap;}
+.editorial-link-primary{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:.5rem 1.2rem;background:var(--green-accent);color:#fff;
+  border-radius:5px;font-size:.8rem;font-weight:500;
+  text-decoration:none;transition:background .2s;
+}
+.editorial-link-primary:hover{background:#25875b;}
+.editorial-link-sec{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:.5rem 1.2rem;border:1px solid rgba(38,134,93,0.35);
+  color:#042718;border-radius:5px;font-size:.8rem;
+  text-decoration:none;transition:all .2s;background:#ffffff;
+}
+.editorial-link-sec:hover{background:#ffffff;border-color:var(--green-accent);}
+</style>
+  <div class="editorial-header">
+    <div class="section-dot" style="background:#26865d;margin-top:5px;"></div>
+    <div>
+      <h2>Editorial Roles</h2>
+      <div class="editorial-meta">Guest Editor · Special Issue · Insects (MDPI)</div>
+    </div>
+  </div>
+
+  <div class="editorial-card">
+    <div class="editorial-icon">📋</div>
+    <div class="editorial-body">
+      <div class="editorial-badge">✦ Guest Editor · Special Issue</div>
+      <div class="editorial-journal-name">Pollinator Diversity, Ecosystem Services, and Conservation in a Changing World</div>
+      <div class="editorial-journal-meta">Insects · MDPI · Impact Factor 2.9 · CiteScore 5.3 · PubMed &amp; Scopus Indexed</div>
+      <p class="editorial-desc">
+        Serving as Guest Editor for this Special Issue of <em>Insects</em> (MDPI). 
+      </p>
+                 <div class="editorial-links">
+        <a class="editorial-link-primary" href="https://www.mdpi.com/journal/insects/special_issues/2B7O7GV91V" target="_blank">&#8599; View Special Issue</a>
+        <a class="editorial-link-sec" href="https://www.mdpi.com/journal/insects" target="_blank">↗ Insects Journal</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 <!-- TEACHING -->
-<section id="teaching" style="padding:3rem 8vw 3.5rem;background:#f7f9f7;border-bottom:1px solid var(--border);">
+<section id="teaching" style="padding:3rem 8vw 3.5rem;background:#f7faf6;border-bottom:1px solid var(--border);">
 
 <style>
 .teach-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.5rem;}
@@ -2469,7 +2573,7 @@ function togJDom(btn){
 
 <footer>
   <p>© 2025 Ehsan Rahimi · Postdoctoral Researcher, Gyeongkuk National University</p>
-  <p>Built to share research openly · <a href="mailto:ehsanrahimi666@gmail.com" style="color:rgba(255,255,255,0.4)">Contact</a></p>
+  <p>Built to share research openly · <a href="mailto:ehsanrahimi666@gmail.com" style="color:rgba(103, 237, 157, 0.4)">Contact</a></p>
 </footer>
 
 <script>
